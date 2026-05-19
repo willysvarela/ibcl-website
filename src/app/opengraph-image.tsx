@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og'
+import path from 'path'
+import fs from 'fs'
 
 export const alt = 'IBCL - Igreja Batista Central Leste'
 export const size = { width: 1200, height: 630 }
@@ -12,10 +14,9 @@ const SECONDARY_CONTAINER = '#f0d7fe'
 const ON_PRIMARY = '#ffffff'
 
 export default async function Image() {
-  const [jakartaBold, jakartaSemiBold] = await Promise.all([
-    loadGoogleFont('Plus+Jakarta+Sans', 700),
-    loadGoogleFont('Plus+Jakarta+Sans', 600),
-  ])
+  const fontsDir = path.join(process.cwd(), 'public/fonts')
+  const jakartaBold = fs.readFileSync(path.join(fontsDir, 'PlusJakartaSans-700.ttf'))
+  const jakartaSemiBold = fs.readFileSync(path.join(fontsDir, 'PlusJakartaSans-600.ttf'))
 
   return new ImageResponse(
     (
@@ -279,16 +280,4 @@ export default async function Image() {
       ],
     }
   )
-}
-
-async function loadGoogleFont(family: string, weight: number): Promise<ArrayBuffer> {
-  const url = `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}&display=swap`
-  const css = await fetch(url, {
-    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Next.js OG image generator)' },
-  }).then((r) => r.text())
-
-  const match = css.match(/src:\s*url\(([^)]+)\)\s*format\('woff2'\)/)
-  if (!match) throw new Error(`Could not parse font URL for ${family} ${weight}`)
-
-  return fetch(match[1]).then((r) => r.arrayBuffer())
 }
