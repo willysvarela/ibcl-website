@@ -63,7 +63,7 @@ export default function PrimeiraVisitaPage() {
     <>
       <PageHero
         tag="Primeira Visita"
-        title="Conta pra gente o que você precisa saber."
+        title="Aqui está o que você precisa saber."
         subtitle="Sabemos que visitar uma nova igreja pode gerar dúvidas. Estamos aqui para tornar tudo mais fácil."
         imageSeed="ibcl-visit"
       />

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   CHURCH_NAME,
@@ -20,11 +21,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-inverse-primary flex items-center justify-center">
-                <span className="text-inverse-surface font-sans font-bold text-sm">IB</span>
-              </div>
-              <span className="font-sans font-bold text-xl text-inverse-primary">{CHURCH_NAME}</span>
+            <div className="mb-4">
+              <Image
+                src="/assets/logo.png"
+                alt={CHURCH_NAME}
+                width={160}
+                height={48}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="font-body text-sm text-inverse-on-surface/70 leading-relaxed max-w-xs mb-4">
               {CHURCH_SLOGAN}
@@ -146,12 +150,20 @@ export function Footer() {
           <p className="font-body text-xs text-inverse-on-surface/40 text-center sm:text-left">
             © {new Date().getFullYear()} {CHURCH_FULL_NAME}. Todos os direitos reservados.
           </p>
-          <Link
-            href="/primeira-visita"
-            className="font-sans font-semibold text-xs text-inverse-primary hover:text-inverse-on-surface transition-colors"
-          >
-            Planeje sua visita →
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/politica-de-privacidade"
+              className="font-sans text-xs text-inverse-on-surface/40 hover:text-inverse-on-surface transition-colors"
+            >
+              Política de Privacidade
+            </Link>
+            <Link
+              href="/primeira-visita"
+              className="font-sans font-semibold text-xs text-inverse-primary hover:text-inverse-on-surface transition-colors"
+            >
+              Planeje sua visita →
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

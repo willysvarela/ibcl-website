@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'motion/react'
 
 const INPUT_BASE = 'w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface font-body text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all'
@@ -159,6 +160,13 @@ export function ContactForm() {
             'Enviar mensagem'
           )}
         </motion.button>
+
+        <p className="font-body text-xs text-on-surface-variant/60 text-center leading-relaxed">
+          Ao enviar, você concorda com o uso dos seus dados para responder sua mensagem.{' '}
+          <Link href="/politica-de-privacidade" className="underline hover:text-primary transition-colors">
+            Política de Privacidade
+          </Link>
+        </p>
       </form>
     </div>
   )

@@ -1,20 +1,40 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'motion/react'
 
 const INPUT_BASE = 'w-full px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface font-body text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all'
 
+type Status = 'idle' | 'submitting' | 'success' | 'error'
+
 export function GOForm() {
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle')
+  const [status, setStatus] = useState<Status>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
   const [form, setForm] = useState({ nome: '', whatsapp: '', bairro: '', casado: '', mensagem: '' })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('submitting')
-    // Simulate / replace with real API call
-    await new Promise((r) => setTimeout(r, 1500))
-    setStatus('success')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch('/api/grupos-de-oracao', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error || 'Erro ao enviar. Tente novamente.')
+      }
+
+      setStatus('success')
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg(err instanceof Error ? err.message : 'Erro ao enviar. Tente novamente.')
+    }
   }
 
   if (status === 'success') {
@@ -26,11 +46,13 @@ export function GOForm() {
         transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="w-16 h-16 rounded-full bg-primary mx-auto flex items-center justify-center mb-5 text-3xl"
+          className="w-16 h-16 rounded-full bg-primary mx-auto flex items-center justify-center mb-5"
           animate={{ scale: [0, 1.2, 1] }}
           transition={{ duration: 0.5 }}
         >
-          ✓
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
         </motion.div>
         <h3 className="font-sans font-bold text-xl text-on-surface mb-3">Mensagem enviada!</h3>
         <p className="font-body text-sm text-on-surface-variant leading-relaxed">
@@ -115,6 +137,19 @@ export function GOForm() {
           />
         </div>
 
+        <AnimatePresence>
+          {status === 'error' && (
+            <motion.p
+              className="font-body text-sm text-error bg-error-container/30 px-4 py-3 rounded-xl"
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+            >
+              {errorMsg}
+            </motion.p>
+          )}
+        </AnimatePresence>
+
         <motion.button
           type="submit"
           disabled={status === 'submitting'}
@@ -137,7 +172,10 @@ export function GOForm() {
         </motion.button>
 
         <p className="font-body text-xs text-on-surface-variant/60 text-center leading-relaxed">
-          Suas informações serão usadas apenas para indicar um grupo próximo a você.
+          Suas informações serão usadas apenas para indicar um grupo próximo a você.{' '}
+          <Link href="/politica-de-privacidade" className="underline hover:text-primary transition-colors">
+            Política de Privacidade
+          </Link>
         </p>
       </form>
     </div>
