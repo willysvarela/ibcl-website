@@ -45,12 +45,12 @@ export function FirstVisitCTA() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/15 text-primary font-sans font-bold text-xs uppercase tracking-wider mb-5">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/15 text-on-primary font-sans font-bold text-xs uppercase tracking-wider mb-5">
               Primeira Visita
             </span>
             <h2 className="font-sans font-bold text-3xl md:text-4xl lg:text-5xl text-on-surface leading-tight tracking-tight mb-6">
               Pensando em nos visitar?
-              <span className="block text-primary">A porta está aberta.</span>
+              <span className="block text-on-primary">A porta está aberta.</span>
             </h2>
             <p className="font-body text-base md:text-lg text-white leading-relaxed mb-8 max-w-md">
               Não precisa de inscrição, convite ou aviso prévio. Basta chegar aos domingos às 18h.
@@ -75,7 +75,7 @@ export function FirstVisitCTA() {
                 rel="noopener noreferrer"
               >
                 <motion.span
-                  className="flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3.5 rounded-xl font-sans font-bold text-sm cursor-pointer w-full sm:w-auto"
+                  className="flex items-center justify-center gap-2 border-2 border-primary text-on-primary px-6 py-3.5 rounded-xl font-sans font-bold text-sm cursor-pointer w-full sm:w-auto"
                   whileHover={{ backgroundColor: 'rgba(15,82,56,0.06)', y: -3 }}
                   whileTap={{ scale: 0.97 }}
                 >
