@@ -3,7 +3,8 @@ import { PageHero } from '@/components/ui/PageHero'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { MotionSection } from '@/components/ui/MotionSection'
 import { GOForm } from '@/components/grupos-de-oracao/GOForm'
-import { WHATSAPP_URL } from '@/lib/constants'
+import { WHATSAPP_URL_GRUPOS_ORACAO } from '@/lib/constants'
+import { HandDrawnIcon, type HandDrawnIconName } from '@/components/ui/HandDrawnIcon'
 
 export const metadata: Metadata = {
   title: 'Grupos de Oração',
@@ -30,11 +31,11 @@ export const metadata: Metadata = {
   },
 }
 
-const pillars = [
-  { icon: '📖', title: 'Revisão da mensagem', desc: 'Cada GO revisita a mensagem do domingo, aprofundando o que foi pregado e aplicando ao dia a dia.' },
-  { icon: '🙏', title: 'Oração conjunta', desc: 'Oramos juntos pelas necessidades dos membros, da igreja e da cidade. A oração é o coração de cada encontro.' },
-  { icon: '🤝', title: 'Amizades reais', desc: 'Nas casas, a intimidade acontece de verdade. GOs são onde amizades profundas são construídas.' },
-  { icon: '🏠', title: 'Em casa, no seu bairro', desc: 'Os grupos acontecem em residências espalhadas por Manaus - basta falar com a secretaria para saber o mais próximo.' },
+const pillars: { icon: HandDrawnIconName; color: string; title: string; desc: string }[] = [
+  { icon: 'Book', color: '#2D6A4F', title: 'Revisão da mensagem', desc: 'Cada GO revisita a mensagem do domingo, aprofundando o que foi pregado e aplicando ao dia a dia.' },
+  { icon: 'Heart', color: '#E2725B', title: 'Oração conjunta', desc: 'Oramos juntos pelas necessidades dos membros, da igreja e da cidade. A oração é o coração de cada encontro.' },
+  { icon: 'Users', color: '#6b5778', title: 'Amizades reais', desc: 'Nas casas, a intimidade acontece de verdade. GOs são onde amizades profundas são construídas.' },
+  { icon: 'Home', color: '#0f5238', title: 'Em casa, no seu bairro', desc: 'Os grupos acontecem em residências espalhadas por Manaus - basta falar com a secretaria para saber o mais próximo.' },
 ]
 
 export default function GruposDeOracaoPage() {
@@ -87,7 +88,7 @@ export default function GruposDeOracaoPage() {
             <div className="grid grid-cols-2 gap-4">
               {pillars.map((p, i) => (
                 <div key={i} className="bg-surface-container-low rounded-2xl p-5 border border-outline-variant/15">
-                  <div className="text-2xl mb-3">{p.icon}</div>
+                  <div className="mb-3"><HandDrawnIcon name={p.icon} size={32} color={p.color} /></div>
                   <h3 className="font-sans font-bold text-sm text-on-surface mb-2">{p.title}</h3>
                   <p className="font-body text-xs text-on-surface-variant leading-relaxed">{p.desc}</p>
                 </div>
@@ -102,7 +103,7 @@ export default function GruposDeOracaoPage() {
         <div className="max-w-[1280px] mx-auto px-5 md:px-16">
           <MotionSection direction="up">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 p-6 bg-accent-yellow/20 rounded-2xl border border-accent-yellow/30">
-              <span className="text-2xl shrink-0">🔒</span>
+              <span className="shrink-0"><HandDrawnIcon name="Padlock" size={28} color="#6b5778" /></span>
               <div>
                 <h3 className="font-sans font-bold text-base text-on-surface mb-1">Privacidade dos endereços</h3>
                 <p className="font-body text-sm text-on-surface-variant leading-relaxed">
@@ -132,7 +133,7 @@ export default function GruposDeOracaoPage() {
                 </svg>
                 <div>
                   <p className="font-sans font-semibold text-sm text-on-surface">WhatsApp da secretaria</p>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary hover:underline">
+                  <a href={WHATSAPP_URL_GRUPOS_ORACAO} target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary hover:underline">
                     (92) 99208-2294
                   </a>
                 </div>

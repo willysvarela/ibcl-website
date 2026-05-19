@@ -4,12 +4,14 @@ import Link from 'next/link'
 import { motion } from 'motion/react'
 import { useRef } from 'react'
 import { useInView } from 'motion/react'
+import { HandDrawnIcon, type HandDrawnIconName } from '@/components/ui/HandDrawnIcon'
+import { WHATSAPP_URL_PRIMEIRA_VISITA } from '@/lib/constants'
 
-const expects = [
-  { icon: '😊', text: 'Ambiente acolhedor e familiar - venha como se sentir confortável' },
-  { icon: '🎵', text: 'Louvor que abre o coração, seguido de mensagem bíblica' },
-  { icon: '👶', text: 'Baby (0–2) e Kids (3–11) acontecem simultaneamente' },
-  { icon: '🚗', text: 'Estacionamento disponível com equipe para orientar você' },
+const expects: { icon: HandDrawnIconName; color: string; text: string }[] = [
+  { icon: 'Heart', color: '#E2725B', text: 'Ambiente acolhedor e familiar - venha como se sentir confortável' },
+  { icon: 'Music', color: '#2D6A4F', text: 'Louvor que abre o coração, seguido de mensagem bíblica' },
+  { icon: 'Profile', color: '#6b5778', text: 'Baby (0–2) e Kids (3–11) acontecem simultaneamente' },
+  { icon: 'Map', color: '#0f5238', text: 'Estacionamento disponível com equipe para orientar você' },
 ]
 
 export function FirstVisitCTA() {
@@ -100,8 +102,8 @@ export function FirstVisitCTA() {
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.3 + i * 0.1 }}
                   >
-                    <div className="w-10 h-10 shrink-0 rounded-xl bg-primary/8 flex items-center justify-center text-xl">
-                      {item.icon}
+                    <div className="w-10 h-10 shrink-0 rounded-xl bg-primary/8 flex items-center justify-center">
+                      <HandDrawnIcon name={item.icon} size={24} color={item.color} />
                     </div>
                     <p className="font-body text-sm text-on-surface-variant leading-relaxed pt-1.5">
                       {item.text}
@@ -111,13 +113,13 @@ export function FirstVisitCTA() {
               </ul>
 
               <div className="mt-8 pt-6 border-t border-outline-variant/20 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary text-lg font-bold shrink-0">
-                  🙋
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                  <HandDrawnIcon name="Profile" size={22} color="#ffffff" />
                 </div>
                 <div>
                   <p className="font-sans font-semibold text-sm text-on-surface">Alguma dúvida?</p>
                   <a
-                    href="https://wa.me/5592992082294"
+                    href={WHATSAPP_URL_PRIMEIRA_VISITA}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-body text-sm text-primary hover:underline"

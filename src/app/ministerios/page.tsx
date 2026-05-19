@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { PageHero } from '@/components/ui/PageHero'
 import { MotionSection, StaggerContainer, staggerChild } from '@/components/ui/MotionSection'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { WHATSAPP_URL, INSTAGRAM_KIDS, INSTAGRAM_TEENS, INSTAGRAM_JOVEM } from '@/lib/constants'
+import { WHATSAPP_URL_MINISTERIOS, WHATSAPP_URL_GRUPOS_ORACAO, INSTAGRAM_KIDS, INSTAGRAM_TEENS, INSTAGRAM_JOVEM } from '@/lib/constants'
+import { HandDrawnIcon, type HandDrawnIconName } from '@/components/ui/HandDrawnIcon'
 
 export const metadata: Metadata = {
   title: 'Ministérios',
@@ -31,9 +32,24 @@ export const metadata: Metadata = {
   },
 }
 
-const ministerios = [
+const ministerios: Array<{
+  emoji: HandDrawnIconName
+  emojiColor: string
+  name: string
+  tag: string
+  tagColor: string
+  schedule: string
+  scheduleNote: string
+  instagram: string | null
+  instagramHandle?: string
+  image: string
+  desc: string
+  highlight: string
+  cta?: { label: string; href: string; external: boolean }
+}> = [
   {
-    emoji: '🍼',
+    emoji: 'Profile',
+    emojiColor: '#6b5778',
     name: 'IBCL Baby - Berçário',
     tag: 'Bebês 0–2 anos',
     tagColor: 'bg-accent-teal/15 text-accent-teal',
@@ -45,7 +61,8 @@ const ministerios = [
     highlight: 'Equipe treinada e supervisionada',
   },
   {
-    emoji: '🎨',
+    emoji: 'Star',
+    emojiColor: '#2D6A4F',
     name: 'IBCL Kids',
     tag: 'Crianças 3–11 anos',
     tagColor: 'bg-accent-teal/15 text-accent-teal',
@@ -58,7 +75,8 @@ const ministerios = [
     highlight: 'Bíblia de forma lúdica e criativa',
   },
   {
-    emoji: '⚡',
+    emoji: 'Signal',
+    emojiColor: '#E2725B',
     name: 'IBCL Teens',
     tag: 'Adolescentes 12–14 anos',
     tagColor: 'bg-accent-coral/15 text-accent-coral',
@@ -71,7 +89,8 @@ const ministerios = [
     highlight: 'Diversão com propósito',
   },
   {
-    emoji: '🔥',
+    emoji: 'Signals',
+    emojiColor: '#713638',
     name: 'IBCL Jovem',
     tag: 'Jovens solteiros 15+',
     tagColor: 'bg-secondary/15 text-secondary',
@@ -84,7 +103,8 @@ const ministerios = [
     highlight: 'Fé intensa e autêntica',
   },
   {
-    emoji: '🏠',
+    emoji: 'Home',
+    emojiColor: '#0f5238',
     name: 'Grupos de Oração',
     tag: 'Casais e convidados',
     tagColor: 'bg-primary/10 text-primary',
@@ -94,10 +114,11 @@ const ministerios = [
     image: 'https://picsum.photos/seed/ibcl-gos2/600/400',
     desc: 'Os Grupos de Oração são o coração relacional da IBCL. Toda semana, casais se reúnem em casas espalhadas pela cidade para revisitar a mensagem do domingo, orar juntos e cultivar amizades reais. Convidados são sempre bem-vindos. Para encontrar o grupo mais próximo da sua casa, entre em contato com a Secretaria.',
     highlight: 'O coração relacional da IBCL',
-    cta: { label: 'Quero participar → WhatsApp', href: WHATSAPP_URL, external: true },
+    cta: { label: 'Quero participar → WhatsApp', href: WHATSAPP_URL_GRUPOS_ORACAO, external: true },
   },
   {
-    emoji: '✝️',
+    emoji: 'Star',
+    emojiColor: '#c49b0a',
     name: 'Culto Familiar',
     tag: 'Toda a família',
     tagColor: 'bg-primary/10 text-primary',
@@ -109,7 +130,8 @@ const ministerios = [
     highlight: 'Nosso encontro central como família',
   },
   {
-    emoji: '🌿',
+    emoji: 'Bookmark',
+    emojiColor: '#2D6A4F',
     name: 'Maturidade Cristã',
     tag: 'Adultos 60+',
     tagColor: 'bg-accent-yellow/20 text-on-surface',
@@ -148,8 +170,8 @@ export default function MinisteriosPage() {
                   <Image src={m.image} alt={m.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-                    <div>
-                      <span className="text-3xl">{m.emoji}</span>
+                    <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-sm">
+                      <HandDrawnIcon name={m.emoji} size={24} color={m.emojiColor} />
                     </div>
                     <span className={`px-2.5 py-1 rounded-full text-xs font-sans font-bold ${m.tagColor} bg-white/90 backdrop-blur-sm`}>
                       {m.tag}
@@ -216,7 +238,7 @@ export default function MinisteriosPage() {
               Nossa secretaria pode te ajudar a encontrar o ministério ideal para você e sua família.
             </p>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_URL_MINISTERIOS}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-sans font-bold text-sm shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300"

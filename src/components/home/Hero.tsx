@@ -3,8 +3,9 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { HandDrawnIcon } from '@/components/ui/HandDrawnIcon'
 import { motion, useScroll, useTransform, useSpring } from 'motion/react'
-import { WHATSAPP_URL } from '@/lib/constants'
+import { WHATSAPP_URL_HERO } from '@/lib/constants'
 
 const WORDS = ['Bem-vindo', 'à', 'IBCL']
 
@@ -178,7 +179,7 @@ export function Hero() {
                   transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
                   className="text-4xl mb-4"
                 >
-                  🤝
+                  <Image src="/assets/hands.svg" alt="Uma família" width={40} height={40} className="text-primary fill-on-primary" />
                 </motion.div>
                 <p className="font-sans font-bold text-2xl">Uma família</p>
                 <p className="font-body text-sm text-on-primary/75 mt-1 leading-snug">
@@ -211,7 +212,7 @@ export function Hero() {
               >
                 <div>
                   <div className="w-9 h-9 rounded-xl bg-accent-coral/15 flex items-center justify-center mb-3">
-                    <span className="text-lg">❤️</span>
+                    <HandDrawnIcon name="Heart" size={20} color="#E2725B" />
                   </div>
                   <p className="font-sans font-bold text-base text-on-surface leading-snug">
                     Acolhimento sem julgamento
@@ -221,7 +222,7 @@ export function Hero() {
                   </p>
                 </div>
                 <motion.a
-                  href={WHATSAPP_URL}
+                  href={WHATSAPP_URL_HERO}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 text-xs font-sans font-semibold text-primary flex items-center gap-1"

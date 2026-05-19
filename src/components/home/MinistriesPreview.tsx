@@ -6,6 +6,7 @@ import { motion } from 'motion/react'
 import { useRef } from 'react'
 import { useInView } from 'motion/react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { HandDrawnIcon, type HandDrawnIconName } from '@/components/ui/HandDrawnIcon'
 
 const ministries = [
   {
@@ -16,7 +17,8 @@ const ministries = [
     image: 'https://picsum.photos/seed/ibcl-kids/600/450',
     schedule: 'Dom. 18h',
     href: '/ministerios',
-    emoji: '🎨',
+    emoji: 'Star' as HandDrawnIconName,
+    emojiColor: '#2D6A4F',
   },
   {
     name: 'IBCL Teens',
@@ -26,7 +28,8 @@ const ministries = [
     image: 'https://picsum.photos/seed/ibcl-teens/600/450',
     schedule: 'Sáb. 16h–18h',
     href: '/ministerios',
-    emoji: '⚡',
+    emoji: 'Signal' as HandDrawnIconName,
+    emojiColor: '#E2725B',
   },
   {
     name: 'IBCL Jovem',
@@ -36,7 +39,8 @@ const ministries = [
     image: 'https://picsum.photos/seed/ibcl-jovem/600/450',
     schedule: 'Sáb. 18h–20h',
     href: '/ministerios',
-    emoji: '🔥',
+    emoji: 'Signals' as HandDrawnIconName,
+    emojiColor: '#713638',
   },
   {
     name: 'Grupos de Oração',
@@ -46,7 +50,8 @@ const ministries = [
     image: 'https://picsum.photos/seed/ibcl-gos/600/450',
     schedule: 'Qua. 18h',
     href: '/grupos-de-oracao',
-    emoji: '🏠',
+    emoji: 'Home' as HandDrawnIconName,
+    emojiColor: '#0f5238',
   },
 ]
 
@@ -73,9 +78,9 @@ function MinistryCard({ m, index }: { m: (typeof ministries)[0]; index: number }
           <Image src={m.image} alt={m.name} fill className="object-cover" />
         </motion.div>
 
-        {/* Emoji overlay */}
-        <div className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-lg shadow-sm">
-          {m.emoji}
+        {/* Icon overlay */}
+        <div className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-sm">
+          <HandDrawnIcon name={m.emoji} size={20} color={m.emojiColor} />
         </div>
 
         {/* Schedule chip */}

@@ -11,8 +11,18 @@ export const CHURCH_MAPS_EMBED =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.917823290853!2d-59.9763!3d-3.0870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1a4e7a34f0ab%3A0x1234567890abcdef!2sAv.%20Cosme%20Ferreira%2C%202690%20-%20Aleixo%2C%20Manaus%20-%20AM!5e0!3m2!1spt-BR!2sbr!4v1234567890'
 
 export const WHATSAPP_NUMBER = '5592992082294'
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 export const WHATSAPP_DISPLAY = '(92) 99208-2294'
+
+function buildWhatsAppUrl(text: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
+}
+
+export const WHATSAPP_URL = buildWhatsAppUrl('Vim do site da IBCL e gostaria de saber como participar.')
+export const WHATSAPP_URL_HERO = buildWhatsAppUrl('Vim do site da IBCL e gostaria de conhecer mais sobre a comunidade.')
+export const WHATSAPP_URL_PRIMEIRA_VISITA = buildWhatsAppUrl('Vim do site da IBCL e gostaria de saber mais sobre a primeira visita.')
+export const WHATSAPP_URL_MINISTERIOS = buildWhatsAppUrl('Vim do site da IBCL e gostaria de saber como participar dos ministérios.')
+export const WHATSAPP_URL_GRUPOS_ORACAO = buildWhatsAppUrl('Vim do site da IBCL e gostaria de participar de um grupo de oração.')
+export const WHATSAPP_URL_CONTATO = buildWhatsAppUrl('Vim do site da IBCL e gostaria de entrar em contato com a secretaria.')
 
 export const INSTAGRAM_IBCL = 'https://www.instagram.com/ibcentralleste'
 export const INSTAGRAM_KIDS = 'https://www.instagram.com/ibclkids'

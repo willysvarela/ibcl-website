@@ -3,7 +3,8 @@ import { PageHero } from '@/components/ui/PageHero'
 import { MotionSection } from '@/components/ui/MotionSection'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { FAQSection } from '@/components/primeira-visita/FAQSection'
-import { WHATSAPP_URL, CHURCH_MAPS_URL, CHURCH_MAPS_EMBED } from '@/lib/constants'
+import { WHATSAPP_URL_PRIMEIRA_VISITA, WHATSAPP_URL_GRUPOS_ORACAO, CHURCH_MAPS_URL, CHURCH_MAPS_EMBED } from '@/lib/constants'
+import { HandDrawnIcon, type HandDrawnIconName } from '@/components/ui/HandDrawnIcon'
 
 export const metadata: Metadata = {
   title: 'Primeira Visita',
@@ -36,7 +37,7 @@ const nextSteps = [
     title: 'Participe de um Grupo de Oração',
     desc: 'É a forma mais rápida de entrar na comunidade e conhecer pessoas. Fale com a secretaria para encontrar o grupo mais perto de você.',
     cta: 'Chamar no WhatsApp',
-    href: WHATSAPP_URL,
+    href: WHATSAPP_URL_GRUPOS_ORACAO,
     external: true,
   },
   {
@@ -44,7 +45,7 @@ const nextSteps = [
     title: 'Conheça o curso "Um com Deus"',
     desc: 'Um percurso especial nos domingos às 17h para quem quer entender os fundamentos da caminhada cristã. Inscrição pela secretaria.',
     cta: 'Inscrever-se',
-    href: WHATSAPP_URL,
+    href: WHATSAPP_URL_PRIMEIRA_VISITA,
     external: true,
   },
   {
@@ -72,44 +73,52 @@ export default function PrimeiraVisitaPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Info cards */}
           <div className="space-y-5">
-            {[
+            {(
+            [
               {
-                icon: '🕖',
+                icon: 'Clock' as HandDrawnIconName,
+                color: '#6b5778',
                 title: 'Horário do Culto',
                 content: 'Domingos às 18h. O culto tem duração de aproximadamente 1h30, encerrando por volta das 20h30.',
               },
               {
-                icon: '📍',
+                icon: 'Location' as HandDrawnIconName,
+                color: '#E2725B',
                 title: 'Como chegar',
                 content: 'Av. Cosme Ferreira, 2690, Aleixo, Manaus/AM.\nReferência: próximo ao DB Supermercados.',
                 link: { label: 'Abrir no Google Maps', href: CHURCH_MAPS_URL },
               },
               {
-                icon: '👔',
+                icon: 'Tag' as HandDrawnIconName,
+                color: '#E2725B',
                 title: 'O que vestir',
                 content: 'Venha como se sentir confortável. Não existe código de vestimenta na IBCL. Pedimos apenas que o traje seja discreto e compatível com o ambiente familiar da igreja.',
               },
               {
-                icon: '🚗',
+                icon: 'Map' as HandDrawnIconName,
+                color: '#0f5238',
                 title: 'Estacionamento',
                 content: 'Há vagas disponíveis dentro e ao lado da igreja. Nossa equipe de estacionamento está presente para orientar você no melhor lugar para parar.',
               },
               {
-                icon: '📋',
+                icon: 'Document' as HandDrawnIconName,
+                color: '#2D6A4F',
                 title: 'Preciso me inscrever?',
                 content: 'Não. Basta chegar e participar. Você é bem-vindo sem aviso prévio, sem cadastro e sem compromisso.',
               },
               {
-                icon: '👶',
+                icon: 'Profile' as HandDrawnIconName,
+                color: '#6b5778',
                 title: 'E os filhos?',
                 content: 'O IBCL Baby (0–2 anos) e o IBCL Kids (3–11 anos) acontecem simultaneamente ao culto com programações específicas. Em caso de necessidade, seu nome aparecerá no telão.',
               },
-            ].map((item, i) => (
+            ] as { icon: HandDrawnIconName; color: string; title: string; content: string; link?: { label: string; href: string } }[]
+          ).map((item, i) => (
               <MotionSection key={i} delay={i * 0.08} direction="left">
                 <div className="bg-surface rounded-2xl p-5 md:p-6 border border-outline-variant/15 shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center text-xl shrink-0">
-                      {item.icon}
+                    <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center shrink-0">
+                      <HandDrawnIcon name={item.icon} size={26} color={item.color} />
                     </div>
                     <div>
                       <h3 className="font-sans font-bold text-base text-on-surface mb-1.5">{item.title}</h3>
