@@ -17,7 +17,27 @@ import {
 
 export const metadata: Metadata = {
   title: 'Contato',
-  description: 'Entre em contato com a IBCL. WhatsApp, redes sociais, endereço e formulário de contato.',
+  description:
+    'Entre em contato com a IBCL em Manaus. WhatsApp, Instagram, endereço e formulário. Secretaria: segunda a sexta das 9h às 17h na Av. Cosme Ferreira, 2690, Aleixo.',
+  keywords: [
+    'contato IBCL', 'endereço Igreja Batista Central Leste', 'WhatsApp IBCL Manaus',
+    'secretaria IBCL', 'Av Cosme Ferreira 2690 Manaus',
+  ],
+  alternates: { canonical: '/contato' },
+  openGraph: {
+    title: 'Contato | IBCL Manaus',
+    description:
+      'Fale com a IBCL via WhatsApp, Instagram ou pelo formulário. Av. Cosme Ferreira, 2690, Aleixo, Manaus/AM.',
+    type: 'website',
+    url: '/contato',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Contato IBCL - Igreja Batista Central Leste' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contato | IBCL Manaus',
+    description: 'WhatsApp, Instagram ou formulário. Av. Cosme Ferreira, 2690, Aleixo, Manaus/AM.',
+    images: ['/opengraph-image'],
+  },
 }
 
 const contactItems = [

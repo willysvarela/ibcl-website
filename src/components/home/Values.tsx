@@ -9,7 +9,7 @@ const values = [
   {
     icon: '📖',
     title: 'A Bíblia como fundamento',
-    desc: 'A Palavra de Deus é nossa maior e única fonte de verdade. Não seguimos tendências — seguimos o eterno.',
+    desc: 'A Palavra de Deus é nossa maior e única fonte de verdade. Não seguimos tendências, seguimos a Palavra de Deus.',
     accent: 'bg-accent-teal/10 border-accent-teal/30',
     iconBg: 'bg-accent-teal/15',
     span: 'lg:col-span-2',
@@ -17,7 +17,7 @@ const values = [
   {
     icon: '🤝',
     title: 'Comunidade de verdade',
-    desc: 'Na IBCL, você encontra pessoas reais que se importam de verdade — nos momentos de alegria e nas dificuldades.',
+    desc: 'Na IBCL, você encontra pessoas reais que se importam de verdade, nos momentos de alegria e nas dificuldades.',
     accent: 'bg-accent-coral/8 border-accent-coral/25',
     iconBg: 'bg-accent-coral/15',
     span: 'lg:col-span-1',
@@ -25,7 +25,7 @@ const values = [
   {
     icon: '👨‍👩‍👧‍👦',
     title: 'Família em Cristo',
-    desc: 'A igreja não é um evento semanal — é uma família. Aqui, relações genuínas são formadas e sustentadas ao longo do tempo.',
+    desc: 'A igreja não é um evento semanal. É uma família. Aqui, relações genuínas são formadas e sustentadas ao longo do tempo.',
     accent: 'bg-secondary-container/60 border-secondary/20',
     iconBg: 'bg-secondary/15',
     span: 'lg:col-span-1',
@@ -33,7 +33,7 @@ const values = [
   {
     icon: '🌱',
     title: 'Crescimento intencional',
-    desc: 'Crescer na fé exige intenção. Oferecemos espaços para todas as idades: da infância à maturidade.',
+    desc: 'Crescer na fé exige intenção. Oferecemos espaços para todas as idades, da infância à maturidade.',
     accent: 'bg-primary/5 border-primary/15',
     iconBg: 'bg-primary/10',
     span: 'lg:col-span-1',
@@ -41,7 +41,7 @@ const values = [
   {
     icon: '❤️',
     title: 'Acolhimento sem julgamento',
-    desc: 'Você não precisa estar com tudo resolvido para vir. A IBCL é um espaço seguro para quem quer recomeçar.',
+    desc: 'Você não precisa estar com tudo resolvido para vir. A IBCL é um espaço seguro para quem quer recomeçar, tem dúvidas ou quer começar a caminhar na fé.',
     accent: 'bg-tertiary/5 border-tertiary/15',
     iconBg: 'bg-tertiary/10',
     span: 'lg:col-span-2',
@@ -49,7 +49,7 @@ const values = [
   {
     icon: '🙏',
     title: 'Adoração que transforma',
-    desc: 'O louvor e a pregação são encontro com Deus. Valorizamos profundamente o momento de adoração coletiva.',
+    desc: 'O louvor e a pregação são encontros com Deus. Valorizamos profundamente o momento de adoração coletiva.',
     accent: 'bg-accent-yellow/15 border-accent-yellow/30',
     iconBg: 'bg-accent-yellow/20',
     span: 'lg:col-span-1',
@@ -105,7 +105,7 @@ export function Values() {
       <SectionHeading
         tag="Quem Somos"
         title="O que nos move como igreja"
-        subtitle="Seis valores que definem como vivemos a fé juntos — não como regras, mas como convicções que moldam cada parte da IBCL."
+        subtitle="Seis valores que definem como vivemos a fé juntos. Convicções que moldam cada parte da IBCL."
         align="center"
       />
 

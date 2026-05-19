@@ -7,14 +7,34 @@ import { WHATSAPP_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Grupos de Oração',
-  description: 'Os Grupos de Oração são o coração relacional da IBCL. Encontre um grupo perto de você e participe toda quarta-feira.',
+  description:
+    'Participe dos Grupos de Oração da IBCL em Manaus. Toda quarta-feira em casas pelo Aleixo e região — comunhão, revisão da mensagem e oração em comunidade.',
+  keywords: [
+    'grupos de oração IBCL', 'grupo de oração Manaus', 'GO IBCL Manaus',
+    'células evangélicas Manaus', 'comunidade cristã Aleixo Manaus',
+  ],
+  alternates: { canonical: '/grupos-de-oracao' },
+  openGraph: {
+    title: 'Grupos de Oração | IBCL Manaus',
+    description:
+      'Toda quarta-feira em casas pelo Aleixo e região — comunhão, Palavra e oração. Encontre um grupo perto de você.',
+    type: 'website',
+    url: '/grupos-de-oracao',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Grupos de Oração da IBCL Manaus' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Grupos de Oração | IBCL Manaus',
+    description: 'Toda quarta-feira em casas no Aleixo e região — comunhão, Palavra e oração.',
+    images: ['/opengraph-image'],
+  },
 }
 
 const pillars = [
   { icon: '📖', title: 'Revisão da mensagem', desc: 'Cada GO revisita a mensagem do domingo, aprofundando o que foi pregado e aplicando ao dia a dia.' },
   { icon: '🙏', title: 'Oração conjunta', desc: 'Oramos juntos pelas necessidades dos membros, da igreja e da cidade. A oração é o coração de cada encontro.' },
   { icon: '🤝', title: 'Amizades reais', desc: 'Nas casas, a intimidade acontece de verdade. GOs são onde amizades profundas são construídas.' },
-  { icon: '🏠', title: 'Em casa, no seu bairro', desc: 'Os grupos acontecem em residências espalhadas por Manaus — basta falar com a secretaria para saber o mais próximo.' },
+  { icon: '🏠', title: 'Em casa, no seu bairro', desc: 'Os grupos acontecem em residências espalhadas por Manaus - basta falar com a secretaria para saber o mais próximo.' },
 ]
 
 export default function GruposDeOracaoPage() {
@@ -43,7 +63,7 @@ export default function GruposDeOracaoPage() {
                 espalhados pelos bairros de Manaus. São o espaço relacional mais importante da IBCL.
               </p>
               <p>
-                Acreditamos que a vida cristã não acontece apenas no culto de domingo — ela se aprofunda nas
+                Acreditamos que a vida cristã não acontece apenas no culto de domingo. Ela se aprofunda nas
                 conversas sinceras, nas orações compartilhadas e nas amizades construídas ao longo do tempo.
               </p>
               <p>

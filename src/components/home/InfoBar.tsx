@@ -61,14 +61,27 @@ export function InfoBar() {
                   {item.label}
                 </p>
                 {item.href ? (
-                  <a
+                  <motion.a
                     href={item.href}
                     target={item.external ? '_blank' : undefined}
                     rel={item.external ? 'noopener noreferrer' : undefined}
-                    className="font-body font-semibold text-sm text-on-primary hover:text-on-primary/80 transition-colors"
+                    className="relative inline-flex items-center gap-1 font-body font-semibold text-sm text-on-primary group"
+                    whileHover="hover"
                   >
                     {item.value}
-                  </a>
+                    {item.external && (
+                      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="opacity-60 shrink-0">
+                        <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M7.5 1H11m0 0v3.5M11 1L5.5 6.5" />
+                      </svg>
+                    )}
+                    <motion.span
+                      className="absolute -bottom-0.5 left-0 h-px bg-on-primary/70 origin-left"
+                      variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
+                      initial="initial"
+                      style={{ width: '100%' }}
+                      transition={{ duration: 0.25, ease: 'easeOut' }}
+                    />
+                  </motion.a>
                 ) : (
                   <p className="font-body font-semibold text-sm text-on-primary">{item.value}</p>
                 )}

@@ -7,7 +7,27 @@ import { WHATSAPP_URL, CHURCH_MAPS_URL, CHURCH_MAPS_EMBED } from '@/lib/constant
 
 export const metadata: Metadata = {
   title: 'Primeira Visita',
-  description: 'Tudo que você precisa saber antes de visitar a IBCL pela primeira vez. Horário, endereço, estacionamento e o que esperar.',
+  description:
+    'Vai visitar a IBCL pela primeira vez? Saiba tudo: culto aos domingos às 18h na Av. Cosme Ferreira, 2690, Aleixo, Manaus. Estacionamento, kids e o que esperar.',
+  keywords: [
+    'primeira visita IBCL', 'visitar Igreja Batista Manaus', 'culto domingo Manaus 18h',
+    'IBCL primeira vez', 'como é o culto IBCL', 'church visitor Manaus',
+  ],
+  alternates: { canonical: '/primeira-visita' },
+  openGraph: {
+    title: 'Primeira Visita | IBCL Manaus',
+    description:
+      'Cultos aos domingos às 18h. Saiba tudo sobre estacionamento, kids e o que esperar na sua primeira visita à IBCL.',
+    type: 'website',
+    url: '/primeira-visita',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Primeira Visita à IBCL Manaus' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Primeira Visita | IBCL Manaus',
+    description: 'Domingos às 18h — saiba tudo antes de visitar a IBCL pela primeira vez.',
+    images: ['/opengraph-image'],
+  },
 }
 
 const nextSteps = [
@@ -61,7 +81,7 @@ export default function PrimeiraVisitaPage() {
               {
                 icon: '📍',
                 title: 'Como chegar',
-                content: 'Av. Cosme Ferreira, 2690 — Aleixo, Manaus/AM.\nReferência: próximo ao DB Supermercados.',
+                content: 'Av. Cosme Ferreira, 2690, Aleixo, Manaus/AM.\nReferência: próximo ao DB Supermercados.',
                 link: { label: 'Abrir no Google Maps', href: CHURCH_MAPS_URL },
               },
               {
@@ -132,7 +152,7 @@ export default function PrimeiraVisitaPage() {
               <div className="bg-primary rounded-2xl p-6 md:p-8 text-on-primary">
                 <h3 className="font-sans font-bold text-xl mb-2">O que esperar às 18h</h3>
                 <p className="font-body text-sm text-on-primary/75 mb-5 leading-relaxed">
-                  O culto começa com um momento de louvor — não apenas uma abertura, mas parte essencial do encontro. Em seguida, a mensagem bíblica do pastor.
+                  O culto começa com um momento de louvor - não apenas uma abertura, mas parte essencial do encontro. Em seguida, a mensagem bíblica do pastor.
                 </p>
                 <ul className="space-y-3">
                   {[

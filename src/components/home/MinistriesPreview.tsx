@@ -12,7 +12,7 @@ const ministries = [
     name: 'IBCL Kids',
     tag: 'Crianças 3–11 anos',
     tagColor: 'bg-accent-teal/15 text-accent-teal',
-    desc: 'A Palavra também é para as crianças. Ensinamos a Bíblia de forma lúdica e criativa — com dinâmicas e atividades para cada faixa etária.',
+    desc: 'A Palavra também é para as crianças. Ensinamos a Bíblia de forma lúdica e criativa, com dinâmicas e atividades para cada faixa etária.',
     image: 'https://picsum.photos/seed/ibcl-kids/600/450',
     schedule: 'Dom. 18h',
     href: '/ministerios',
@@ -110,7 +110,7 @@ function MinistryCard({ m, index }: { m: (typeof ministries)[0]; index: number }
 
 export function MinistriesPreview() {
   return (
-    <section className="py-20 md:py-28 bg-surface-container-low">
+    <section id="ministerios" className="py-20 md:py-28 bg-surface-container-low scroll-mt-16 md:scroll-mt-20">
       <div className="max-w-[1280px] mx-auto px-5 md:px-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 md:mb-14">
           <div className="max-w-lg">

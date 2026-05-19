@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { MotionSection } from '@/components/ui/MotionSection'
 
 const values = [
-  { icon: '📖', title: 'A Bíblia como fundamento', desc: 'Não seguimos tendências — seguimos o eterno.' },
+  { icon: '📖', title: 'A Bíblia como fundamento', desc: 'Não seguimos tendências, seguimos a Palavra de Deus.' },
   { icon: '🤝', title: 'Comunidade de verdade', desc: 'Pessoas reais que se importam de verdade.' },
   { icon: '👨‍👩‍👧‍👦', title: 'Família em Cristo', desc: 'Relações genuínas formadas e sustentadas.' },
   { icon: '🌱', title: 'Crescimento intencional', desc: 'Espaços para todas as idades e fases da vida.' },
@@ -19,7 +19,7 @@ export function ValuesSection() {
         <SectionHeading
           tag="Nossos Valores"
           title="O que nos define como igreja"
-          subtitle="Não são apenas palavras — são os pilares que sustentam cada decisão, cada ministério e cada relacionamento dentro da IBCL."
+          subtitle="Não são apenas palavras. São os pilares que sustentam cada decisão, cada ministério e cada relacionamento dentro da IBCL."
           align="center"
           light
         />

@@ -55,7 +55,7 @@ export async function getYouTubeVideos(maxResults = 9): Promise<YouTubeVideo[]> 
 
 function getMockVideos(count: number): YouTubeVideo[] {
   const titles = [
-    'A fé que move montanhas — Domingo',
+    'A fé que move montanhas, Domingo',
     'Vivendo em comunidade: lições de Atos',
     'O propósito de Deus para sua família',
     'Confiança em tempos difíceis',

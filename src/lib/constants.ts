@@ -1,12 +1,12 @@
 export const CHURCH_NAME = 'IBCL'
 export const CHURCH_FULL_NAME = 'Igreja Batista Central Leste'
-export const CHURCH_SLOGAN = 'Muito mais que amigos — uma família que caminha junto na Palavra.'
+export const CHURCH_SLOGAN = 'Muito mais que amigos, uma família que caminha junto na Palavra.'
 export const CHURCH_TAGLINE = 'Um lugar onde você é esperado, acolhido e desafiado a crescer.'
 
-export const CHURCH_ADDRESS = 'Av. Cosme Ferreira, 2690 — Aleixo, Manaus/AM'
-export const CHURCH_ADDRESS_SHORT = 'Av. Cosme Ferreira, 2690 — Aleixo'
+export const CHURCH_ADDRESS = 'Av. Cosme Ferreira, 2690, Aleixo, Manaus/AM'
+export const CHURCH_ADDRESS_SHORT = 'Av. Cosme Ferreira, 2690, Aleixo, Manaus/AM'
 export const CHURCH_MAPS_URL =
-  'https://www.google.com/maps?daddr=Av.+Cosme+Ferreira+-+Coroado,+Manaus+-+AM,+69083-000'
+  'https://maps.app.goo.gl/vA2B2puRC3vDoiwY7'
 export const CHURCH_MAPS_EMBED =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.917823290853!2d-59.9763!3d-3.0870!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1a4e7a34f0ab%3A0x1234567890abcdef!2sAv.%20Cosme%20Ferreira%2C%202690%20-%20Aleixo%2C%20Manaus%20-%20AM!5e0!3m2!1spt-BR!2sbr!4v1234567890'
 
@@ -30,5 +30,6 @@ export const NAV_LINKS = [
   { href: '/sobre', label: 'Sobre' },
   { href: '/ministerios', label: 'Ministérios' },
   { href: '/mensagens', label: 'Mensagens' },
+  { href: '/devocionais', label: 'Devocionais' },
   { href: '/contato', label: 'Contato' },
 ]

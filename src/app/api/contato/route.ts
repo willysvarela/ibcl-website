@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       from: `IBCL Site <${fromEmail}>`,
       to: toEmail,
       replyTo: email,
-      subject: `[Site IBCL] ${assunto || 'Nova mensagem'} — ${nome}`,
+      subject: `[Site IBCL] ${assunto || 'Nova mensagem'} - ${nome}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #0f5238;">Nova mensagem via site da IBCL</h2>

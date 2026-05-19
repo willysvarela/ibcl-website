@@ -112,3 +112,86 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
 }
+
+/* Devocional prose content */
+.devocional-content {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: var(--color-on-surface);
+}
+
+.devocional-content p {
+  margin-bottom: 1.5rem;
+}
+
+.devocional-content h2 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-on-surface);
+}
+
+.devocional-content h3 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-on-surface);
+}
+
+.devocional-content blockquote {
+  border-left: 3px solid var(--color-primary);
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--color-on-surface-variant);
+  font-style: italic;
+}
+
+.devocional-content blockquote p {
+  margin-bottom: 0;
+}
+
+.devocional-content strong {
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.devocional-content em {
+  font-style: italic;
+}
+
+.devocional-content ul,
+.devocional-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.devocional-content ul {
+  list-style-type: disc;
+}
+
+.devocional-content ol {
+  list-style-type: decimal;
+}
+
+.devocional-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.devocional-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.devocional-content a:hover {
+  opacity: 0.8;
+}

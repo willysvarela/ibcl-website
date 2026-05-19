@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { useInView } from 'motion/react'
 
 const expects = [
-  { icon: '😊', text: 'Ambiente acolhedor e familiar — venha como se sentir confortável' },
+  { icon: '😊', text: 'Ambiente acolhedor e familiar - venha como se sentir confortável' },
   { icon: '🎵', text: 'Louvor que abre o coração, seguido de mensagem bíblica' },
   { icon: '👶', text: 'Baby (0–2) e Kids (3–11) acontecem simultaneamente' },
   { icon: '🚗', text: 'Estacionamento disponível com equipe para orientar você' },

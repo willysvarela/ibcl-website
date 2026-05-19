@@ -6,7 +6,23 @@ import { HistorySection } from '@/components/sobre/HistorySection'
 export const metadata: Metadata = {
   title: 'Sobre Nós',
   description:
-    'Conheça a história, a liderança e os valores da Igreja Batista Central Leste — 25 anos de fé e comunidade em Manaus.',
+    'Conheça a história e os valores da IBCL — Igreja Batista Central Leste. 25 anos de fé e comunidade no coração do Aleixo, Manaus/AM.',
+  keywords: ['história IBCL', 'Igreja Batista Central Leste história', 'valores IBCL', 'missão IBCL Manaus'],
+  alternates: { canonical: '/sobre' },
+  openGraph: {
+    title: 'Sobre Nós | IBCL Manaus',
+    description:
+      'Conheça a história e os valores da IBCL — 25 anos de fé e comunidade no coração do Aleixo, Manaus/AM.',
+    type: 'website',
+    url: '/sobre',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Sobre a IBCL - Igreja Batista Central Leste' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sobre Nós | IBCL Manaus',
+    description: 'Conheça a história e os valores da IBCL — 25 anos de fé em Manaus/AM.',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default function SobrePage() {

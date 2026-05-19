@@ -9,7 +9,27 @@ import { YOUTUBE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Mensagens',
-  description: 'Ouça as pregações da IBCL. Toda semana, uma nova mensagem disponível no YouTube.',
+  description:
+    'Assista às pregações da IBCL no YouTube. Mensagens bíblicas toda semana para ouvir onde e quando quiser — direto da Igreja Batista Central Leste, Manaus/AM.',
+  keywords: [
+    'pregações IBCL', 'sermões Igreja Batista Manaus', 'mensagens bíblicas online',
+    'culto IBCL YouTube', 'pregação online Manaus', 'palavra de Deus Manaus',
+  ],
+  alternates: { canonical: '/mensagens' },
+  openGraph: {
+    title: 'Mensagens | IBCL Manaus',
+    description:
+      'Pregações bíblicas da IBCL disponíveis toda semana no YouTube. Ouça onde e quando quiser.',
+    type: 'website',
+    url: '/mensagens',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Mensagens da IBCL no YouTube' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mensagens | IBCL Manaus',
+    description: 'Pregações bíblicas toda semana no YouTube — Igreja Batista Central Leste, Manaus/AM.',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default async function MensagensPage() {

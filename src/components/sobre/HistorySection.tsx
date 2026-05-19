@@ -8,7 +8,7 @@ const timeline = [
   {
     year: '1999',
     title: 'Uma semente plantada',
-    desc: 'O Pastor Moisés Pinto Souza reuniu um pequeno grupo de pessoas no Bairro Ouro Verde com uma visão clara: construir algo além de uma reunião semanal — uma família.',
+    desc: 'O Pastor Moisés Pinto Souza reuniu um pequeno grupo de pessoas no Bairro Ouro Verde com uma visão clara: construir algo além de uma reunião semanal. Uma família.',
     image: 'https://picsum.photos/seed/ibcl-1999/600/400',
     side: 'right',
   },
@@ -37,7 +37,7 @@ const timeline = [
 
 export function HistorySection() {
   return (
-    <section className="py-20 md:py-28 px-5 md:px-16 max-w-[1280px] mx-auto">
+    <section id="historia" className="py-20 md:py-28 px-5 md:px-16 max-w-[1280px] mx-auto scroll-mt-16 md:scroll-mt-20">
       <SectionHeading
         tag="Nossa História"
         title="25 anos de fé e comunidade"
@@ -86,7 +86,7 @@ export function HistorySection() {
 
       {/* Leadership card */}
       <MotionSection delay={0.2} className="mt-20">
-        <div className="bg-surface-container rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center md:items-start border border-outline-variant/15">
+        <div id="lideranca" className="bg-surface-container rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center md:items-start border border-outline-variant/15 scroll-mt-16 md:scroll-mt-20">
           <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden shrink-0 bg-surface-container-high">
             <Image
               src="https://picsum.photos/seed/pastor-leandro/200/200"
@@ -105,8 +105,7 @@ export function HistorySection() {
             </p>
             <p className="font-body text-base text-on-surface-variant leading-relaxed max-w-xl">
               Leandro Souza dá continuidade à visão fundadora com um olhar voltado para o futuro.
-              Sob sua liderança, a IBCL aprofunda seu compromisso com a comunidade e com o discipulado,
-              sendo para cada pessoa muito mais que uma religião — uma família.
+              Sob sua liderança, a IBCL aprofunda seu compromisso com a comunidade e com o discipulado.
             </p>
           </div>
         </div>

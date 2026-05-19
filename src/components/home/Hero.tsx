@@ -17,7 +17,7 @@ export function Hero() {
   const opacity = useTransform(smoothProgress, [0, 0.6], [1, 0])
 
   return (
-    <section ref={containerRef} className="relative min-h-[92svh] md:min-h-[88vh] flex items-center overflow-hidden bg-surface">
+    <section id="hero" ref={containerRef} className="relative min-h-[92svh] md:min-h-[88vh] flex items-center overflow-hidden bg-surface scroll-mt-16 md:scroll-mt-20">
       {/* Animated background blobs */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
@@ -57,7 +57,7 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
               />
               <span className="font-sans font-bold text-xs uppercase tracking-wider">
-                Domingos às 18h — Manaus/AM
+                Culto todos os domingos às 18h
               </span>
             </motion.div>
 

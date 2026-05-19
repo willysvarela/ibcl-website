@@ -109,7 +109,7 @@ export function MessagesPreview({ videos }: Props) {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 md:mb-14">
         <SectionHeading
           tag="Mensagens"
-          title="Pregações da IBCL"
+          title="Mensagens"
           subtitle="Ouça quando e onde quiser. Toda semana, uma nova mensagem disponível no YouTube."
         />
         <motion.div

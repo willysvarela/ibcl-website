@@ -8,13 +8,33 @@ import { WHATSAPP_URL, INSTAGRAM_KIDS, INSTAGRAM_TEENS, INSTAGRAM_JOVEM } from '
 
 export const metadata: Metadata = {
   title: 'Ministérios',
-  description: 'Conheça todos os ministérios da IBCL: Baby, Kids, Teens, Jovem, Grupos de Oração, Culto e Maturidade Cristã.',
+  description:
+    'Explore os ministérios da IBCL em Manaus: IBCL Baby, Kids, Teens, Jovem, Grupos de Oração e Maturidade Cristã. Um espaço intencional para cada etapa da vida.',
+  keywords: [
+    'ministérios IBCL', 'IBCL Kids Manaus', 'IBCL Jovem Manaus', 'IBCL Teens Manaus',
+    'grupos de oração Manaus', 'ministério infantil Manaus', 'jovens evangélicos Manaus',
+  ],
+  alternates: { canonical: '/ministerios' },
+  openGraph: {
+    title: 'Ministérios | IBCL Manaus',
+    description:
+      'IBCL Baby, Kids, Teens, Jovem, Grupos de Oração e Maturidade Cristã — um espaço para cada etapa da vida em Manaus/AM.',
+    type: 'website',
+    url: '/ministerios',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Ministérios da IBCL Manaus' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ministérios | IBCL Manaus',
+    description: 'Baby, Kids, Teens, Jovem, GOs e Maturidade — um espaço para cada etapa da vida.',
+    images: ['/opengraph-image'],
+  },
 }
 
 const ministerios = [
   {
     emoji: '🍼',
-    name: 'IBCL Baby — Berçário',
+    name: 'IBCL Baby - Berçário',
     tag: 'Bebês 0–2 anos',
     tagColor: 'bg-accent-teal/15 text-accent-teal',
     schedule: 'Domingos às 18h',
@@ -34,7 +54,7 @@ const ministerios = [
     instagram: INSTAGRAM_KIDS,
     instagramHandle: '@ibclkids',
     image: 'https://picsum.photos/seed/ibcl-kids2/600/400',
-    desc: 'A Palavra também é para as crianças — e ela pode ser ensinada de forma divertida! O IBCL Kids trabalha a Bíblia de forma lúdica, criativa e responsável, garantindo que cada criança aprenda e se sinta pertencente. Dinâmicas, histórias e atividades cuidadosamente planejadas para cada faixa etária.',
+    desc: 'A Palavra também é para as crianças. Ela pode ser ensinada de forma divertida! O IBCL Kids trabalha a Bíblia de forma lúdica, criativa e responsável, garantindo que cada criança aprenda e se sinta pertencente. Dinâmicas, histórias e atividades cuidadosamente planejadas para cada faixa etária.',
     highlight: 'Bíblia de forma lúdica e criativa',
   },
   {
@@ -47,7 +67,7 @@ const ministerios = [
     instagram: INSTAGRAM_TEENS,
     instagramHandle: '@ibclteens',
     image: 'https://picsum.photos/seed/ibcl-teens2/600/400',
-    desc: 'A adolescência é uma fase decisiva — e a IBCL quer caminhar junto com os jovens nela. O IBCL Teens é uma programação semanal repleta de dinâmicas, eventos especiais e ensinamentos da Palavra pensados para esse momento único da vida. Diversão com propósito.',
+    desc: 'A adolescência é uma fase decisiva, e a IBCL quer caminhar junto com os jovens nela. O IBCL Teens é uma programação semanal repleta de dinâmicas, eventos especiais e ensinamentos da Palavra pensados para esse momento único da vida. Diversão com propósito.',
     highlight: 'Diversão com propósito',
   },
   {
@@ -78,14 +98,14 @@ const ministerios = [
   },
   {
     emoji: '✝️',
-    name: 'Culto — Domingo',
+    name: 'Culto Familiar',
     tag: 'Toda a família',
     tagColor: 'bg-primary/10 text-primary',
     schedule: 'Domingos às 18h',
     scheduleNote: 'Duração: ~1h30',
     instagram: null,
     image: 'https://picsum.photos/seed/ibcl-culto/600/400',
-    desc: 'O culto dominical é o nosso encontro central como família. Começamos com um momento de louvor coletivo, seguido da mensagem bíblica. As mensagens são gravadas e disponibilizadas no YouTube semanalmente após o culto.',
+    desc: 'O culto de domingo é o nosso encontro central como família. Começamos com um momento de louvor coletivo, seguido da mensagem bíblica. As mensagens são gravadas e disponibilizadas no YouTube semanalmente após o culto.',
     highlight: 'Nosso encontro central como família',
   },
   {
@@ -93,7 +113,7 @@ const ministerios = [
     name: 'Maturidade Cristã',
     tag: 'Adultos 60+',
     tagColor: 'bg-accent-yellow/20 text-on-surface',
-    schedule: 'A cada 2 semanas — Sábados, 16h às 18h',
+    schedule: 'A cada 2 semanas - Sábados, 16h às 18h',
     scheduleNote: 'Na sede IBCL',
     instagram: null,
     image: 'https://picsum.photos/seed/ibcl-maturidade/600/400',
@@ -108,11 +128,11 @@ export default function MinisteriosPage() {
       <PageHero
         tag="Ministérios"
         title="Um lugar para cada pessoa"
-        subtitle="Da infância à maturidade — cada ministério é um espaço intencional para você crescer, pertencer e se conectar."
+        subtitle="Da infância à maturidade - cada ministério é um espaço intencional para você crescer, pertencer e se conectar."
         imageSeed="ibcl-ministerios"
       />
 
-      <section className="py-20 md:py-28 px-5 md:px-16 max-w-[1280px] mx-auto">
+      <section id="cards" className="py-20 md:py-28 px-5 md:px-16 max-w-[1280px] mx-auto scroll-mt-16 md:scroll-mt-20">
         <SectionHeading
           tag="Todos os ministérios"
           title="Encontre onde você se encaixa"
