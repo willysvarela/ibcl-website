@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'motion/react'
@@ -42,15 +43,17 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between px-5 md:px-16 h-16 md:h-20 max-w-[1280px] mx-auto">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <motion.div
-              className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="text-on-primary font-sans font-bold text-sm">IB</span>
+          <Link href="/" className="flex items-center shrink-0">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Image
+                src="/assets/logo.png"
+                alt={CHURCH_NAME}
+                width={160}
+                height={48}
+                className="h-10 w-auto md:h-12"
+                priority
+              />
             </motion.div>
-            <span className="font-sans font-bold text-xl text-primary hidden sm:block">{CHURCH_NAME}</span>
           </Link>
 
           {/* Desktop nav */}
