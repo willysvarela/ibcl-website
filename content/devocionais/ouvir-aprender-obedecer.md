@@ -1,6 +1,6 @@
 ---
 title: "Ouvir, aprender e obedecer"
-date: "2026-04-23"
+date: "2026-05-19"
 excerpt: "Sem o ensino da Palavra passado de geração em geração, o povo esquece de Deus. Moisés nos lembra: ouvir, aprender e obedecer começa em casa."
 coverSeed: "deuteronomio-ensino-familia"
 ---

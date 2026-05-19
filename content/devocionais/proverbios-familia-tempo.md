@@ -1,6 +1,6 @@
 ---
 title: "Valorize o tempo que você tem com sua família"
-date: "2026-04-16"
+date: "2026-05-15"
 excerpt: "A família é um projeto de Deus. Nossas escolhas hoje definem como seremos vistos pelos nossos amados amanhã — e depois de anos."
 coverSeed: "proverbios-familia-tempo"
 ---

@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "O que Deus uniu"
 date: "2026-05-19"
@@ -26,4 +25,3 @@ Essa verdade vai além do casamento. Fazemos parte da família de Deus e somos c
 
 - **Ser agente de pacificação.** Quando surgir algum desentendimento — na família ou na igreja — ser a pessoa que buscará a reconciliação e a união, não o conflito.
 - **Fortalecer a união familiar.** Marcar um dia nesta semana para um momento de lazer juntos e criar boas memórias.
-```
