@@ -64,8 +64,11 @@ export default function PoliticaDePrivacidadePage() {
             </div>
           </div>
           <p className="mt-4">
-            Não coletamos dados automaticamente de navegação (cookies de rastreamento, pixels de terceiros
-            ou dados de comportamento) além do que é necessário para o funcionamento técnico do site.
+            Este site utiliza o <strong className="text-on-surface font-semibold">Cloudflare Web Analytics</strong> para
+            medir o número de visitas às páginas. Esse serviço não usa cookies, não rastreia usuários individualmente
+            e não coleta dados pessoais identificáveis — apenas contagens agregadas de visitas, país de origem
+            (aproximado), tipo de dispositivo e referenciador. Não utilizamos pixels de terceiros nem ferramentas
+            de rastreamento comportamental.
           </p>
         </section>
 

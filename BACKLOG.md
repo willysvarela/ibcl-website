@@ -6,8 +6,8 @@ Items pending for a future sprint. Not blockers for launch.
 
 ## Analytics
 
-- Add Vercel Analytics (`@vercel/analytics`) or Google Analytics to `layout.tsx`
-- Track key events: WhatsApp button clicks, form submissions, YouTube link clicks
+- ✅ Cloudflare Web Analytics added to `layout.tsx` (cookie-free, no consent needed)
+- Track key events: WhatsApp button clicks, form submissions, YouTube link clicks (requires Cloudflare Workers or a custom solution — low priority)
 
 ## Conteúdo — Devocionais
 
