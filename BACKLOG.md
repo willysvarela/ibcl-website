@@ -23,18 +23,3 @@ Items pending for a future sprint. Not blockers for launch.
 
 - `HistorySection.tsx` — replace `picsum.photos/seed/pastor-leandro` with a real portrait
 - Consider expanding the bio text
-
-## Verificação de estatísticas
-
-- `Hero.tsx:134`, `opengraph-image.tsx:169`, `sobre/page.tsx` — all display "25+ anos de história"
-- Confirm with leadership whether "25+" or "26+" is the preferred figure for 2026
-
-## Domínio `ibcl.com.br`
-
-- Confirm domain is registered and DNS is pointing to Vercel
-- Verify SSL certificate is issued in the Vercel dashboard
-- Set `NEXT_PUBLIC_SITE_URL=https://ibcl.com.br` in Vercel production environment variables
-
-## Verificação de handles do Instagram
-
-- `@ibclkids`, `@ibclteens`, `@ibcljovem` — confirm these handles exist and are the correct accounts before launch
