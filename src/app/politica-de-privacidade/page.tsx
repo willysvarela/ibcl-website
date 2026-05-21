@@ -20,7 +20,7 @@ export default function PoliticaDePrivacidadePage() {
           Política de Privacidade
         </h1>
         <p className="font-body text-sm text-on-surface-variant">
-          Última atualização: maio de 2025
+          Última atualização: maio de 2026
         </p>
       </div>
 
@@ -37,7 +37,7 @@ export default function PoliticaDePrivacidadePage() {
             Para dúvidas ou solicitações relacionadas a esta política, entre em contato com nossa secretaria:
           </p>
           <ul className="mt-2 space-y-1 list-disc list-inside">
-            <li>E-mail: <a href="mailto:secretaria@ibcl.com.br" className="text-primary hover:underline">secretaria@ibcl.com.br</a></li>
+            <li>E-mail: <a href="mailto:secretaria@ibcentralleste.com.br" className="text-primary hover:underline">secretaria@ibcentralleste.com.br</a></li>
             <li>WhatsApp: <a href="https://wa.me/5592992082294" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">(92) 99208-2294</a></li>
           </ul>
         </section>
@@ -139,7 +139,7 @@ export default function PoliticaDePrivacidadePage() {
           </ul>
           <p className="mt-4">
             Para exercer qualquer desses direitos, entre em contato pelo e-mail{' '}
-            <a href="mailto:secretaria@ibcl.com.br" className="text-primary hover:underline">secretaria@ibcl.com.br</a>.
+            <a href="mailto:secretaria@ibcentralleste.com.br" className="text-primary hover:underline">secretaria@ibcentralleste.com.br</a>.
             Atenderemos em até <strong className="text-on-surface font-semibold">15 dias úteis</strong>.
           </p>
         </section>

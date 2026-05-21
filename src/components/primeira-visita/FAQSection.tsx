@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Quanto tempo dura o culto?',
-    a: 'Em média 1h30. O culto começa às 18h e termina por volta das 20h30.',
+    a: 'Em média 1h30. O culto começa às 18h e termina por volta das 19h30.',
   },
   {
     q: 'O que vestir para os cultos?',

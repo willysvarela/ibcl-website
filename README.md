@@ -47,7 +47,7 @@ cp .env.example .env.local
 | `YOUTUBE_CHANNEL_ID` | ID do canal do YouTube (não o handle). Para encontrar: canal → Sobre → Compartilhar → Copiar ID |
 | `RESEND_API_KEY` | Chave da API Resend |
 | `RESEND_FROM_EMAIL` | E-mail remetente (ex: `noreply@ibcl.com.br`) |
-| `RESEND_TO_EMAIL` | E-mail destinatário (ex: `secretaria@ibcl.com.br`) |
+| `RESEND_TO_EMAIL` | E-mail destinatário (ex: `secretaria@ibcentralleste.com.br`) |
 
 > Sem `YOUTUBE_CHANNEL_ID`, o site exibe vídeos mock. Sem `RESEND_API_KEY`, o formulário retorna erro 503.
 

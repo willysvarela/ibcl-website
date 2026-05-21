@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
     const resend = new Resend(apiKey)
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'noreply@ibcl.com.br'
-    const toEmail = process.env.RESEND_TO_EMAIL || 'secretaria@ibcl.com.br'
+    const toEmail = process.env.RESEND_TO_EMAIL || 'secretaria@ibcentralleste.com.br'
 
     await resend.emails.send({
       from: `IBCL Site <${fromEmail}>`,
