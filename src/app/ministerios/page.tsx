@@ -70,7 +70,7 @@ const ministerios: Array<{
     scheduleNote: 'Simultâneo ao culto',
     instagram: INSTAGRAM_KIDS,
     instagramHandle: '@ibclkids',
-    image: 'https://picsum.photos/seed/ibcl-kids2/600/400',
+    image: '/assets/ibcl-kids-2.png',
     desc: 'A Palavra também é para as crianças. Ela pode ser ensinada de forma divertida! O IBCL Kids trabalha a Bíblia de forma lúdica, criativa e responsável, garantindo que cada criança aprenda e se sinta pertencente. Dinâmicas, histórias e atividades cuidadosamente planejadas para cada faixa etária.',
     highlight: 'Bíblia de forma lúdica e criativa',
   },
